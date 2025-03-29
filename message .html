@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramzan Wishes & Friendship Note</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f8f8f8;
+            margin: 0;
+            background-image: url('C:/Users/Somay/OneDrive/her/img 13.jpg'); /* Replace with your image URL */
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .container {
+            background-color: #fff;
+            padding: 40px; 
+            background-image: url('C:/Users/Somay/OneDrive/her/img 8.jpg');
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease-out;
+            max-width: 600px;
+            width: 90%;
+        }
+        .text-container h1, .text-container h3 {
+            opacity: 0;
+        }
+        .signature {
+            font-style: italic;
+            text-align: right;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text-container">
+            <h1>To My Special One</h1>
+            <h3>You are more than just a friend—like my daughter 👩‍👧. From the moment we became close, I knew our bond was something special 💖. I care for you deeply, always making sure your happy 😊, safe 🛡️, and supported 🤗. Whenever you faces challenges, I stand by your side ,  and a shoulder to lean on 💕. Your  happiness means the world to me 🌍💖, and I do everything I can to see your smile 😄. No matter what life throws our way, I will always be there to protect and love you unconditionally ❤️. you are not just my best friend, you know how i can treat you❤️.And sometimes i can hurt you🥺 but you don't leave me in my hardest time💟.Finally i can say you one thing <b>"love you💓</b><em>jashu❤️"</em>and one name i can all you my dear <b>"Andhala Rakshasi😚"</b></h3>
+            <h3 class="signature">This is for u<br>❤️😘💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋</h3>
+            <audio controls>
+                <source src="C:\Users\Somay\OneDrive\her\sra audio.opus" type="audio/mpeg">
+                Your browser does not support the audio element.
+              </audio>
+        </div>
+    </div>
+
+    <script>
+        function typeWriterEffect(element, speed = 50, delay = 1000) {
+            return new Promise(resolve => {
+                const text = element.textContent;
+                element.textContent = '';
+                element.style.opacity = 1;
+                let i = 0;
+                const timer = setInterval(() => {
+                    if (i < text.length) {
+                        element.textContent += text.charAt(i);
+                        i++;
+                    } else {
+                        clearInterval(timer);
+                        setTimeout(resolve, delay);
+                    }
+                }, speed);
+            });
+        }
+
+        async function revealText() {
+            const headings = document.querySelectorAll('.text-container h1, .text-container h3');
+            for (const heading of headings) {
+                await typeWriterEffect(heading, 50, 500);
+            }
+        }
+
+        window.onload = revealText;
+    </script>
+</body>
+</html>

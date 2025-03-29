@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramzan Wishes & Friendship Note</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f8f8f8;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease-out;
+            max-width: 600px;
+            width: 90%;
+        }
+        .greeting {
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            color: #333;
+            animation: fadeIn 1.5s ease-out 0.3s forwards; /* Changed to forwards */
+            opacity: 0;
+        }
+        .ramzan-message {
+            font-size: 1.1em;
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 30px;
+            animation: fadeIn 1.5s ease-out 0.6s forwards; /* Changed to forwards */
+            opacity: 0;
+        }
+        .ramzan-mubarak {
+            font-size: 2em;
+            font-weight: bold;
+            color: #28a745; /* A nice green color */
+            margin-bottom: 30px;
+            animation: pulse 2s infinite alternate;
+        }
+        
+        /* Keyframes for animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes pulse {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .star {
+            position: fixed;
+            background-color: gold;
+            border-radius: 50%;
+            animation: twinkle 1.5s infinite alternate;
+        }
+
+        @keyframes twinkle {
+            from {
+                opacity: 0.7;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1.1;
+                transform: scale(1.05);
+            }
+        }
+    </style>
+</head>
+<body background="C:\Users\Somay\OneDrive\her\img.jpg">
+    <div class="container">
+        <p class="greeting">My Dearest Jashu</p>
+        <p class="ramzan-message">
+            As the blessed month of Ramzan approaches, I wanted to reach out and wish you and your family all the blessings and joy this holy time brings. And i wish your heart be filled with peace and happiness.
+        </p>
+        <p class="ramzan-mubarak">Ramzan Mubarak!</p>
+        <a href="C:\Users\Somay\OneDrive\her\message .html">click me</a>
+    </div>
+
+    <script>
+        function createStars(count) {
+            const body = document.body;
+            for (let i = 0; i < count; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                const size = Math.random() * 8 + 4; // Random size between 4 and 12px
+                star.style.width = `${size}px`;
+                star.style.height = `${size}px`;
+                star.style.left = `${Math.random() * 100}vw`;
+                star.style.top = `${Math.random() * 100}vh`;
+                star.style.animationDelay = `${Math.random() * 2}s`; // Slightly staggered animation
+                body.appendChild(star);
+            }
+        }
+
+        // Create some twinkling stars in the background
+        createStars(40);
+    </script>
+</body>
+</html>
